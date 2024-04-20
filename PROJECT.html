@@ -1,0 +1,116 @@
+<html>
+<head>
+  <title>College Website</title>
+  <style>
+body {
+  font-family: Arial, sans-serif;
+}
+
+#login-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#login-form {
+  display: inline-block;
+  text-align: left;
+}
+
+input, select, button {
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+  </style>
+
+
+</head>
+<body>
+  <div id="login-container">
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+      <label for="user-type">User Type:</label>
+      <select id="user-type">
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+      </select>
+      <button type="button" onclick="login()">Login</button>
+      <p id="error-message"></p>
+      <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+    </form>
+  </div>
+
+  <div id="student-pages" class="hidden">
+    <button id="timetable" onclick="timetable()">Timetable</button>
+    <button id="studym" onclick="studym()">Study Materials</button>
+    <button id="acc" onclick="acc()">Academic Results</button>
+  </div>
+
+  <div id="faculty-pages" class="hidden">
+    <button id="facultytt" onclick="facultytt()">Timetable</button>
+    <button id="facultyp" onclick="facultyp()">Portfolio</button>
+    <button id="facultyas" onclick="facultyas()">Assignments</button>
+  </div>
+
+  <script>
+function login() {
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  const userType = document.getElementById('user-type').value;
+  const errorMessage = document.getElementById('error-message');
+
+  if (username === 'student' && password === 'studentpass' && userType === 'student') {
+    showStudentPages();
+  } else if (username === 'faculty' && password === 'facultypass' && userType === 'faculty') {
+    showFacultyPages();
+  } else {
+    errorMessage.textContent = 'Invalid credentials';
+  }
+}
+
+function showStudentPages() {
+  document.getElementById('login-container').style.display = 'none';
+  document.getElementById('student-pages').style.display = 'block';
+}
+
+function showFacultyPages() {
+  document.getElementById('login-container').style.display = 'none';
+  document.getElementById('faculty-pages').style.display = 'block';
+}
+
+function showPage(page) {
+  // Dummy function, replace with actual page content display logic
+  alert(`Displaying ${page} page`);
+}
+
+function showSignUp() {
+  alert('Sign Up functionality would be implemented here');
+}
+
+function timetable() {
+      window.location.href = 'timetable.html';
+    }
+function studym() {
+      window.location.href = 'studym.html';
+    }
+function acc() {
+      window.location.href = 'acc.html';
+    }
+function facultytt() {
+      window.location.href = 'facultytt.html';
+    }
+function facultyp() {
+      window.location.href = 'facultyp.html';
+    }
+function facultyas() {
+      window.location.href = 'facultyas.html';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+<head>
+  <title>Faculty Portfolio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f6f6f6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .portfolio-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .profile {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      max-width: 150px;
+      height: auto;
+    }
+
+    .info {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .info h2 {
+      color: #007bff;
+    }
+
+    .info p {
+      margin: 0;
+    }
+
+    .skills {
+      margin-top: 20px;
+    }
+
+    .skills h3 {
+      color: #333;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skills li {
+      display: inline-block;
+      margin-right: 10px;
+      background-color: #007bff;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="portfolio-container">
+    <h1>Faculty Portfolio</h1>
+    
+    <div class="profile">
+      <img src="profile-picture.jpg" alt="Profile Picture">
+      <div class="info">
+        <h2>Dr. John Doe</h2>
+        <p>Associate Professor<br>Department of Computer Science<br>University XYZ</p>
+      </div>
+    </div>
+
+    <div class="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li>Teaching</li>
+        <li>Research</li>
+        <li>Programming</li>
+        <li>Data Analysis</li>
+        <li>Problem Solving</li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <h3>Experience</h3>
+      <p>10+ years of experience in academia and research.</p>
+    </div>
+
+    <div class="publications">
+      <h3>Publications</h3>
+      <p>Published several research papers in top-tier conferences and journals.</p>
+    </div>
+  </div>
+
+</body>
+</html>
